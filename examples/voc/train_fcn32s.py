@@ -113,7 +113,7 @@ def main():
         start_epoch = checkpoint['epoch']
         start_iteration = checkpoint['iteration']
     else:
-        vgg16 = torchfcn.models.VGG16(pretrained=True)
+        vgg16 = torchfcn.models.VGG16(pretrained=False)
         model.copy_params_from_vgg16(vgg16)
     if cuda:
         model = model.cuda()
