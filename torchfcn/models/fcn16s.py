@@ -4,7 +4,7 @@ import fcn
 import torch.nn as nn
 
 from .fcn32s import get_upsampling_weight
-
+from .custom import data
 
 class FCN16s(nn.Module):
 

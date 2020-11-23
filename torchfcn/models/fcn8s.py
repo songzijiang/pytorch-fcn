@@ -4,7 +4,7 @@ import fcn
 import torch.nn as nn
 
 from .fcn32s import get_upsampling_weight
-
+from .custom import data
 
 class FCN8s(nn.Module):
 
@@ -13,7 +13,7 @@ class FCN8s(nn.Module):
 
     @classmethod
     def download(cls):
-        return fcn.data.cached_download(
+        return data.cached_download(
             url='http://drive.google.com/uc?id=0B9P1L--7Wd2vT0FtdThWREhjNkU',
             # url = 'https://www.temp.jacksung.cn/fcn8s_from_caffe.pth',
             path=cls.pretrained_model,
@@ -177,7 +177,7 @@ class FCN8sAtOnce(FCN8s):
 
     @classmethod
     def download(cls):
-        return fcn.data.cached_download(
+        return data.cached_download(
             url='http://drive.google.com/uc?id=0B9P1L--7Wd2vblE1VUIxV1o2d2M',
             # url='https://www.temp.jacksung.cn/fcn8s-atonce_from_caffe.pth',
             path=cls.pretrained_model,

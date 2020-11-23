@@ -4,7 +4,7 @@ import fcn
 
 import torch
 import torchvision
-
+from .custom import data
 
 def VGG16(pretrained=False):
     model = torchvision.models.vgg16(pretrained=False)
@@ -17,7 +17,7 @@ def VGG16(pretrained=False):
 
 
 def _get_vgg16_pretrained_model():
-    return fcn.data.cached_download(
+    return data.cached_download(
         url='http://drive.google.com/uc?id=0B9P1L--7Wd2vLTJZMXpIRkVVRFk',
         # url='https://www.temp.jacksung.cn/vgg16_from_caffe.pth',
         path=osp.expanduser('~/data/models/pytorch/vgg16_from_caffe.pth'),

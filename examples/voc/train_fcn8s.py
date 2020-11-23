@@ -12,10 +12,6 @@ import torchfcn
 
 from train_fcn32s import get_parameters
 from train_fcn32s import git_hash
-import socket
-import socks
-socks.set_default_proxy(socks.SOCKS5, "127.0.0.1", 1080)
-socket.socket = socks.socksocket
 
 
 here = osp.dirname(osp.abspath(__file__))
