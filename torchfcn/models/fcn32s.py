@@ -30,7 +30,6 @@ class FCN32s(nn.Module):
 
     @classmethod
     def download(cls):
-        print("修改真的会生效吗")
         return fcn.data.cached_download(
             # url='http://drive.google.com/uc?id=0B9P1L--7Wd2vM2oya3k0Zlgtekk',
             url='https://www.temp.jacksung.cn/fcn32s_from_caffe.pth',
