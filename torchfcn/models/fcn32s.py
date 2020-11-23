@@ -4,6 +4,7 @@ import fcn
 import numpy as np
 import torch
 import torch.nn as nn
+from .custom import data
 
 
 # https://github.com/shelhamer/fcn.berkeleyvision.org/blob/master/surgery.py
@@ -28,9 +29,10 @@ class FCN32s(nn.Module):
     pretrained_model = \
         osp.expanduser('~/data/models/pytorch/fcn32s_from_caffe.pth')
 
+
     @classmethod
     def download(cls):
-        return fcn.data.cached_download(
+        return data.cached_download(
             url='http://drive.google.com/uc?id=0B9P1L--7Wd2vM2oya3k0Zlgtekk',
             # url='https://www.temp.jacksung.cn/fcn32s_from_caffe.pth',
             path=cls.pretrained_model,
