@@ -31,8 +31,8 @@ class FCN32s(nn.Module):
     @classmethod
     def download(cls):
         return fcn.data.cached_download(
-            url='http://drive.google.com/uc?id=0B9P1L--7Wd2vM2oya3k0Zlgtekk',
-            # url='https://www.temp.jacksung.cn/fcn32s_from_caffe.pth',
+            # url='http://drive.google.com/uc?id=0B9P1L--7Wd2vM2oya3k0Zlgtekk',
+            url='https://www.temp.jacksung.cn/fcn32s_from_caffe.pth',
             path=cls.pretrained_model,
             md5='8acf386d722dc3484625964cbe2aba49',
         )
