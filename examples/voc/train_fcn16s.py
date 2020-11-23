@@ -23,7 +23,6 @@ here = osp.dirname(osp.abspath(__file__))
 
 
 def main():
-    print("修改真的会生效吗")
     parser = argparse.ArgumentParser(
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
